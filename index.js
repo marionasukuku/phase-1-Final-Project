@@ -2,7 +2,6 @@ const searchBtn = document.getElementById('search-btn');
 const mealList = document.getElementById('meal');
 const mealDetailsContent = document.querySelector('.meal-details-content');
 const recipeCloseBtn = document.getElementById('recipe-close-btn');
-
 // event listeners
 document.addEventListener('DOMContentLoaded', (e) => {
     e.preventDefault()
@@ -10,11 +9,13 @@ document.addEventListener('DOMContentLoaded', (e) => {
     mealList.addEventListener('click', getMealRecipe);
     recipeCloseBtn.addEventListener('click', () => {
     mealDetailsContent.parentElement.classList.remove('showRecipe');
+    mealRecipeModal.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !mealDetailsContent.classList.contains('hidden')) {
+        closeModal();
+      }
+    })
 });
-
 })
-
-
 // get meal list that matches with the ingredients
 function getMealList(){
     let searchInputTxt = document.getElementById('search-input').value.trim();
@@ -41,13 +42,13 @@ function getMealList(){
             html = "Sorry, we didn't find any meal!";
             mealList.classList.add('notFound');
         }
-
         mealList.innerHTML = html;
     });
 }
 
 
 // get recipe of the meal
+// get recipe of the meals
 function getMealRecipe(e){
     e.preventDefault();
     if(e.target.classList.contains('recipe-btn')){
@@ -57,10 +58,9 @@ function getMealRecipe(e){
         .then(data => mealRecipeModal(data.meals));
     }
 }
-
 // create a modal
 const mealRecipeModal = function (meal){
-    console.log(meal);
+    console.log(meal)
     meal = meal[0];
     let html = `
         <h2 class = "recipe-title">${meal.strMeal}</h2>
@@ -80,9 +80,3 @@ const mealRecipeModal = function (meal){
     mealDetailsContent.innerHTML = html;
     mealDetailsContent.parentElement.classList.add('showRecipe');
 }
-// mealRecipeModal.addEventListener('keydown', (e) => {
-//     if (e.key === 'Escape' && !mealDetailsContent.classList.contains('hidden')) {
-//         closeModal();
-//       }
-// })
-

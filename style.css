@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
-
 *{
     padding: 0;
     margin: 0;
@@ -10,6 +9,7 @@
     --tenne-tawny-dark: #b54507;
 }
 body{
+    background-color: #5906df;
     font-weight: 300;
     font-size: 1.05rem;
     line-height: 1.6;
@@ -18,7 +18,6 @@ body{
     position: relative;
     background-size: cover;
 }
-
 /*  */
 .btn{
     font-family: inherit;
@@ -33,11 +32,10 @@ body{
     font-size: 2rem;
     margin-bottom: 1rem;
 }
-
 /*  */
 .container{
     min-height: 100vh;
-
+   
 }
 .meal-wrapper{
     max-width: 1280px;
@@ -141,7 +139,6 @@ body{
 .recipe-btn:hover{
     background: var(--tenne-tawny-dark);
 }
-
 /* meal details */
 .meal-details{
     position: fixed;
@@ -176,13 +173,10 @@ body{
     -ms-border-radius: 2rem;
     -o-border-radius: 2rem;
 }
-
-
 /* js related */
 .showRecipe{
     display: block;
 }
-
 .meal-details-content{
     margin: 2rem;
 }
@@ -239,79 +233,8 @@ body{
 .recipe-instruct{
     padding: 1rem 0;
 }
-.recipe-meal-img img{
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    -o-border-radius: 50%;
-    margin: 0 auto;
-    display: block;
-}
-.recipe-link{
-    margin: 1.4rem 0;
-}
-.recipe-link a{
-    color: #fff;
-    font-size: 1.2rem;
-    font-weight: 700;
-    transition: all 0.4s linear;
-    -webkit-transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -ms-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
-}
-.recipe-link a:hover{
-    opacity: 0.8;
-}  
-
-/*  */
-.notFound{
-    grid-template-columns: 1fr!important;
-    color: var(--tenne-tawny);
-    font-size: 1.8rem;
-    font-weight: 600;
-    width: 100%;
-}
-/* .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    backdrop-filter: blur(3px);
-    z-index: 5;
-  } */
-
-
-/* Media Queries */
-@media screen and (min-width: 600px){
-    .meal-search-box{
-        width: 540px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-@media screen and (min-width: 768px){
-    #meal{
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    .meal-item{
-        margin: 0;
-    }
-    .meal-details{
-        width: 700px;
-    }
-}
-
-@media screen and (min-width: 992px){
-    #meal{
-        grid-template-columns: repeat(3, 1fr);
-    }
+footer{
+    text-align: center;
+    text-decoration: #5906df;
+    color: #5906df;
 }
