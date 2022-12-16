@@ -31,5 +31,7 @@ alternatively
     Right click on the index.html file and select Open Liveserver
     Or simply run
 
-$ live-serve
+$ live-server
+
+https://marionasukuku.github.io/phase-1-Final-Project/
 
